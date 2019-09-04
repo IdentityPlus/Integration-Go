@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Happy IoT</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet"> 
+        <style>
+            body{font-family:Roboto, sans-seri;font-weight:300; font-size:16px; background-color:#273040; background-image:url('dashboard3.png'); background-position:top left; background-size:cover; margin:0; padding:0;}
+            h1, h2{font-weight:300; color:rgba(0,0,0,.9);}
+            h2{padding-top:10px; border-top:1px solid rgba(0, 0, 0, 0.2); margin-top:10px;}
+            table.content{height:100vh; width:100%;}
+            table.content td{vertical-align:center;text-align:center;}
+            table.list{display:inline-block; border-collapse:collapse; border:1px solid rgba(0, 0, 0, 0.15); border-bottom:0;margin-bottom:20px;}
+            table.list td, table.list th{vertical-align:top;text-align:left; background:rgba(210, 220, 230, .7); padding:10px 40px; color:rgba(0, 0, 0, .9); font-weight:300; border-bottom:1px solid rgba(0, 0, 0, 0.1);}
+            div{overflow:hidden; max-width:800px; display:none; background:rgba(255,255,255,0.90); padding:40px 60px; border-radius:3px; border:1px solid rgba(0,0,0,0.8); box-shadow: 0px 0px 14px 4px rgba(0,0,0,.20);}
+            ul{display:inline-block;}
+            p, li{text-align:left; font-size:14px; color:rgba(255,255,255,1);}
+            p{text-align:left; color:rgba(0,0,0,.5);}
+            a.branding:after{content:'.plus'; color:#4292D3;}
+            a{color:#000000; text-decoration:none;} 
+            a.button{background:rgb(0, 121, 165); padding:10px 30px; color:white;border-radius:3px; font-size:18px; margin-top:30px;}
+        </style>
+        <script>
+            function close_w(){
+                document.getElementById('win').style.display = 'none';
+            }
+
+            window.setTimeout(function(){
+                document.getElementById('win').style.display = 'inline-block';
+            }, 2000);
+        </script>
+    </head>
+    <body>
+        <table class="content"><tr><td>
+            <div id="win">
+                <h1>Happy IoT</h1>
+                <h2>Your access to this resource is allowed based on the following header configurations</h2>
+                <table class="list">
+                    <tr><th>Name</th><th>Value</th></tr>
+                    ${content}
+                </table>
+                
+                <h1><a class="button" href="javascript:close_w()">Ok</a></h1>
+            </div>
+        </td></tr></table>
+    </body>
+</html>

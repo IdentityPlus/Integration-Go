@@ -1,0 +1,16 @@
+{
+    "port":1330,
+    "trust-store":"identity/identity-plus-trust-store.pem",
+    "agent-certificate":"identity/client-id.cer",
+    "agent-key":"identity/client-id.key",
+    "workers":[
+        {
+            "host":"10.0.2.15",
+            "port":9090
+        },
+        {
+            "host":"10.0.2.15",
+            "port":9090
+        }
+    ]
+}
